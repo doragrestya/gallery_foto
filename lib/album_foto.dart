@@ -11,7 +11,7 @@ class _AlbumPageState extends State<AlbumPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ALBUM'),
+        title: Text('ALBUM', style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
       ),
       body: Column(
@@ -25,8 +25,8 @@ class _AlbumPageState extends State<AlbumPage> {
                     child: ListTile(
                       leading:
                         Container(
-                          height: 100,
-                          width: 100,
+                          height: 50,
+                          width: 50,
                           decoration: BoxDecoration(
                             shape: BoxShape.rectangle,
                             image: DecorationImage(
@@ -37,11 +37,31 @@ class _AlbumPageState extends State<AlbumPage> {
                           ),
                         ),
                       title: Text('Camera'),
-                      subtitle: Text('11 Foto'),
+                      subtitle: Text('12'),
                     )),
                 onTap: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context) => FotoPage()));
                 },
+              ),
+            ),
+          ),
+
+          Padding(
+            padding: EdgeInsets.only(top: 10),
+          ),
+
+          Container(
+            child: SizedBox(
+              height: 100,
+              width: MediaQuery.of(context).size.width,
+              child: GestureDetector(
+                child: Card(
+                    child: ListTile(
+                      leading:
+                      Icon(Icons.camera, size: 50,),
+                      title: Text('Album Lainnya'),
+                      subtitle: Text('0'),
+                    )),
               ),
             ),
           ),

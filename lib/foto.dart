@@ -6,9 +6,9 @@ class FotoPage extends StatefulWidget {
 }
 
 class _FotoPageState extends State<FotoPage> {
-  List<Container> daftarRice = new List();
+  List<Container> daftarGambar = new List();
 
-  var jenisRice = [
+  var jenisGambar = [
     {"nama": "Rojolele", "gambar": "rojolele.jpg"},
     {"nama": "Beras Batang Lembang", "gambar": "batang_lembang.jpg"},
     {"nama": "Beras Cokelat", "gambar": "cokelat.jpg"},
@@ -20,14 +20,16 @@ class _FotoPageState extends State<FotoPage> {
     {"nama": "Beras Merah", "gambar": "merah.jpg"},
     {"nama": "Beras Pandan Wangi", "gambar": "pandan_wangi.jpg"},
     {"nama": "Profile", "gambar": "profile.png"},
+    {"nama": "Ballons", "gambar": "ballons.jpg"},
+
   ];
 
   _buatDataList() async {
-    for (var i = 0; i < jenisRice.length; i++) {
-      final jenisnya = jenisRice[i];
+    for (var i = 0; i < jenisGambar.length; i++) {
+      final jenisnya = jenisGambar[i];
       final String gambar = jenisnya["gambar"];
 
-      daftarRice.add(new Container(
+      daftarGambar.add(new Container(
         child: Column(
           children: <Widget>[
             Center(
@@ -68,7 +70,7 @@ class _FotoPageState extends State<FotoPage> {
       ),
       body: GridView.count(
         crossAxisCount: 4,
-        children: daftarRice,
+        children: daftarGambar,
       ),
     );
   }
