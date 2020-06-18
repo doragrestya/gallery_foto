@@ -36,11 +36,14 @@ class _FotoPageState extends State<FotoPage> {
               child: new Hero(
                 tag: jenisnya['nama'],
                 child: InkWell(
-                  child: new Image.asset(
-                    "images/$gambar",
-                    height: 100.0,
-                    width: 100.0,
-                    fit: BoxFit.cover,
+                  child: Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: new Image.asset(
+                      "images/$gambar",
+                      height: 90.0,
+                      width: 90.0,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context) => Detail(image: gambar)));
@@ -88,7 +91,7 @@ class Detail extends StatelessWidget {
         centerTitle: true,
       ),
       body: Image.asset('images/$image', height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width,),
+      width: MediaQuery.of(context).size.width,),backgroundColor: Colors.black,
     );
   }
 }
