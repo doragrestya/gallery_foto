@@ -9,8 +9,6 @@ class _FotoPageState extends State<FotoPage> {
   List<Container> daftarGambar = new List();
 
   var jenisGambar = [
-    {"nama": "Rojolele", "gambar": "rojolele.jpg"},
-    {"nama": "Beras Batang Lembang", "gambar": "batang_lembang.jpg"},
     {"nama": "Beras Cokelat", "gambar": "cokelat.jpg"},
     {"nama": "Beras Hitam", "gambar": "hitam.jpg"},
     {"nama": "Beras IR42", "gambar": "ir42.jpg"},
@@ -40,8 +38,6 @@ class _FotoPageState extends State<FotoPage> {
                     padding: const EdgeInsets.all(5.0),
                     child: new Image.asset(
                       "images/$gambar",
-                      height: 90.0,
-                      width: 90.0,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -72,7 +68,7 @@ class _FotoPageState extends State<FotoPage> {
         centerTitle: true,
       ),
       body: GridView.count(
-        crossAxisCount: 4,
+        crossAxisCount: 2,
         children: daftarGambar,
       ),
     );

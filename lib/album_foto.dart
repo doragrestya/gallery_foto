@@ -31,12 +31,12 @@ class _AlbumPageState extends State<AlbumPage> {
                             shape: BoxShape.rectangle,
                             image: DecorationImage(
                                 image: AssetImage(
-                                  ('images/rojolele.jpg'),
+                                  ('images/cokelat.jpg'),
                                 ),
                                 fit: BoxFit.cover),
                           ),
                         ),
-                      title: Text('Camera'),
+                      title: Text('Camera', style: TextStyle(fontSize: 15),),
                       subtitle: Text('12'),
                     )),
                 onTap: (){
@@ -59,7 +59,7 @@ class _AlbumPageState extends State<AlbumPage> {
                     child: ListTile(
                       leading:
                       Icon(Icons.camera, size: 50,),
-                      title: Text('Album Lainnya'),
+                      title: Text('Album Lainnya', style: TextStyle(fontSize: 15)),
                       subtitle: Text('0'),
                     )),
               ),
